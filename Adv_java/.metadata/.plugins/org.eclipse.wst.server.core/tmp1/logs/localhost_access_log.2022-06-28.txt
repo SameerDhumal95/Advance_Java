@@ -1,0 +1,3 @@
+127.0.0.1 - - [28/Jun/2022:00:09:22 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Jun/2022:00:09:30 +0530] "GET /JSPExample/WEB-INF/Calculator.jsp HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [28/Jun/2022:00:10:13 +0530] "GET /JSPExample/WEB-INF/Calculator.jsp HTTP/1.1" 404 682

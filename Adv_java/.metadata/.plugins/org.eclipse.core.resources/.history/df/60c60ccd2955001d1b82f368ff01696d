@@ -1,0 +1,9 @@
+package InterviewQuestions;
+
+public class parsing {
+public static void main(String[] args) {
+	String num = "458";
+	int i = (int)num.charAt(0);
+	System.out.println(i);
+}
+}

@@ -1,0 +1,39 @@
+package study.sess;
+
+import java.io.IOException;
+import java.util.Enumeration;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+
+@WebServlet("/LogoutServlet")
+public class LogoutServlet extends HttpServlet {
+		protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+			HttpSession session = request.getSession(false);
+			if(session == null)
+			{
+				response.getWriter().append("ILLEGAL LOGOUT ");
+			}
+			else
+			{
+				Enumeration<String> enumeration =session.getAttributeNames();
+				while(enumeration.hasMoreElements())
+				{
+					String attr = enumeration.nextElement();
+					session.removeAttribute(attr);
+				}
+				session.invalidate();
+				response.sendRedirect("LoginServlet"); //new request is sent to another servlet and the output is sent to browser
+				
+			}
+		
+		
+		}
+
+	}

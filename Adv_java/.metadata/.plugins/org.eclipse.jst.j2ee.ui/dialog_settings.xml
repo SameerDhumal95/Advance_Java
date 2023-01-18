@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="J2EE_EXPORT_OVERWRITE"/>
+	<item value="false" key="J2EE_EXPORT_SOURCE"/>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="Apache Tomcat v9.0"/>
+		<item value="NULL_RUNTIME"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\JSPExample.war"/>
+		<item value="C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\FirstServlet.war"/>
+		<item value="C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\FirstServletExample.war"/>
+		<item value="C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\FSE.war"/>
+		<item value="C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\JDBCServletExample2.war"/>
+		<item value="C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\FirstServletExample_HW1_22_06_2022.war"/>
+	</list>
+</section>

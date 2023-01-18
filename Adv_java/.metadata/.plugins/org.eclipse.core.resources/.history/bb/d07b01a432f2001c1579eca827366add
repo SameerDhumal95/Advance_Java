@@ -1,0 +1,31 @@
+package study;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class MyServlet extends HttpServlet {
+	
+    /*this is generating an HTML*/
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		//we are setting the http response header content type property
+		response.setContentType("test/html");
+		
+		//we are connecting printwritter to the response body
+		PrintWriter pw = response.getWriter();
+		
+		//whatever we print here goes to http response body
+		pw.println("<html><body>");
+		pw.println("<h1> HTML generated from servlet </h1>");
+		pw.println("</body></html>");
+		pw.close();
+	}
+
+}

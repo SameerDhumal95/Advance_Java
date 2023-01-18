@@ -1,0 +1,39 @@
+package study.hw3;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component("acc")
+@Scope(value="prototype")
+public class AccountBean {
+    
+	@Value("1234")
+	int accno;
+	
+	@Value("450000")
+	int balance;
+
+	public int getAccno() {
+		return accno;
+	}
+
+	public void setAccno(int accno) {
+		this.accno = accno;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	@Override
+	public String toString() {
+		return "AccountBean [accno=" + accno + ", balance=" + balance + "]";
+	}
+	
+	
+}

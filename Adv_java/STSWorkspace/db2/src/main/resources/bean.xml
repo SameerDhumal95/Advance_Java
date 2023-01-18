@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context">
+    
+    <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    
+    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+    <property name="url" value="jdbc:mysql://localhost:3306/ietmar2022"></property>
+    <property name="username" value="root"></property>
+    <property name="password" value="2022"></property>
+    
+    
+    </bean>
+<!--  HW3
+<bean id="msg" class="study.hw3.DAOBeanUsingJdbcTemplate">
+
+<property name="template" ref="jdbc"></property>
+
+</bean>
+
+-->
+    
+    
+    <!-- Hw4 -->
+<bean id="msg" class="study.hw4.DAOBeanUsingJdbcTemplate">
+
+<property name="template" ref="jdbc"></property>
+
+</bean>
+
+
+
+
+<bean id="jdbc" class="org.springframework.jdbc.core.JdbcTemplate">
+
+<property name="dataSource" ref="ds"></property>
+
+
+</bean>
+
+ </beans>

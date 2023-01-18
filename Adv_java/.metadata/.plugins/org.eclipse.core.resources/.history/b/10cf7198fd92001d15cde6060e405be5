@@ -1,0 +1,21 @@
+package study;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Client {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		
+		Class.forName("com.mysql.cj.jdbc");
+		String url = "jdbc:mysql://localhost:3306/ietmar2022";
+		String uname = "root";
+		String pass = "2022";
+	  Connection con = DriverManager.getConnection(url,uname,pass);
+		
+	  System.out.println(con);
+	}
+
+	
+}

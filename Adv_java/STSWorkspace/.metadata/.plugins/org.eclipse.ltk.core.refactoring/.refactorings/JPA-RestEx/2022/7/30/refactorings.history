@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ProductEntity.java&apos; to &apos;HW_06_07_22/src/main/java/study.jpa&apos;&#x0D;&#x0A;- Original project: &apos;JPA-RestEx&apos;&#x0D;&#x0A;- Destination element: &apos;HW_06_07_22/src/main/java/study.jpa&apos;&#x0D;&#x0A;- Original element: &apos;study.jparest.entity.ProductEntity.java&apos;" description="Copy compilation unit" destination="=HW_06_07_22/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;study.jpa" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;study.jparest.entity{ProductEntity.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1658255662664" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [30/Jun/2022:08:14:55 +0530] "GET /JSPExample/addproduct.jsp HTTP/1.1" 200 477
+0:0:0:0:0:0:0:1 - - [30/Jun/2022:08:15:29 +0530] "GET /JSPExample/addproduct.jsp?id=97&name=cards&cost=485 HTTP/1.1" 500 399

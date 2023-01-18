@@ -1,0 +1,70 @@
+package com.uniquedeveloper.registration;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DAO {
+
+	
+	public Connection myGetConnection()
+	{
+		Connection con=null;
+		try {
+		Class.forName("com.mysql.jdbc.Driver");
+		
+		String url = "jdbc:mysql://localhost:3306/LoginForm";
+		String username ="root";
+		String pwd = "2022";
+		
+		con = DriverManager.getConnection(url, username, pwd);
+		}
+		catch(ClassNotFoundException | SQLException e)
+		{
+			System.out.println("the connection could not be made "+e);
+		}
+		return con;
+	}
+	
+
+	public void addProduct(String uname,String upwd,String uemail,String umobile)
+	{
+		Connection con = myGetConnection();
+		try {
+        PreparedStatement pst = con.prepareStatement("insert into users(uname,upwd,uemail,umobile) values(?,?,?,?)");
+		 
+		pst.setString(1,uname);
+		pst.setString(2,upwd);
+		pst.setString(3,uemail);
+		pst.setString(4,umobile);
+		pst.executeUpdate();
+        con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}//add product
+	
+	public ResultSet getRows(String sql) 
+	{
+		Connection con = myGetConnection();
+		Statement stmt;
+		ResultSet rs = null;
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			
+		}
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		return rs;
+		
+	}
+
+}

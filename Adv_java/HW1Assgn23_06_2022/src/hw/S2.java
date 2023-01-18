@@ -1,0 +1,45 @@
+package hw;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.ws.Response;
+
+
+@WebServlet("/S2")
+public class S2 extends HttpServlet {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String _id=request.getParameter("id");
+		int id=Integer.parseInt(_id);
+		
+		DAO dao=new DAO();
+		ResultSet rs=dao.getRows("select * from product where id="+id);
+		response.setContentType("text/html");
+		PrintWriter pw = response.getWriter();
+		pw.println("<html><body>");
+		pw.println("<table>");
+
+		try {
+			rs.next();
+			pw.println("<tr><td>"+rs.getInt(1)
+			+"</td><td>"+rs.getString(2)
+			+"</td><td>"+rs.getInt(3)+"</td></tr>");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		pw.println("</table>");
+		dao.deleteRecord(id);
+		pw.println("</body></html>");
+		pw.close();
+	}
+
+}

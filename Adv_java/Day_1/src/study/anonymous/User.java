@@ -1,0 +1,77 @@
+package study.anonymous;
+
+//Shortcut of implementing interface using anonymous class
+
+public class User {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		I1 obj = new I1() {//anonymous class implement interface I1
+			
+			@Override
+			public void doTask3(int x) {
+				// TODO Auto-generated method stub
+				System.out.println(x);
+			}
+			
+			@Override
+			public String doTask2() {
+				// TODO Auto-generated method stub
+				return "Hi";
+			}
+			
+			@Override
+			public void doTask1() {
+				// TODO Auto-generated method stub
+				System.out.println("intask 1");
+			}
+		};
+		
+		obj.doTask1();
+		System.out.println(obj.doTask2());
+		obj.doTask3(45);
+	}
+
+}//end of User class
+
+interface I1
+{
+	void doTask1();
+	String doTask2();
+	void doTask3(int x);
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//Traditional method of interface implementation
+
+/*
+interface I1
+{
+	void dojob();
+}
+
+
+class abc implements I1
+{
+
+	@Override
+	public void dojob() {
+		// TODO Auto-generated method stub
+		System.out.println("Hello Interface");
+	}
+	
+}
+
+class User
+{
+	public static void main(String[] args) {
+		I1 obj =new abc();
+		obj.dojob();
+		
+	}
+}
+
+*/
